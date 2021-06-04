@@ -1,6 +1,6 @@
 ---
 title: "Untitled"
-author: "Jonathan"
+author: "James"
 date: "6/4/2021"
 output:
   pdf_document: default
