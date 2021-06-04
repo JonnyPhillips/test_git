@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+author: "Jonathan"
+date: "6/4/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+library("tidyverse")
+library("tidylog")
+library("nycflights13")
+```
+
+```{r}
+flights %>% group_by(origin) %>% tally()
+```
+

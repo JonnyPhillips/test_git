@@ -1,0 +1,41 @@
+\documentclass{article}
+
+% \title{Análise de Voos}
+% \author{Jonathan}
+
+\begin{document}
+
+% \maketitle
+
+O meu artigo profissional.
+
+<<>>=
+17*56
+@
+
+<<warning=F, message=F>>=
+library("tidyverse")
+library("tidylog")
+library("nycflights13")
+library("knitr")
+
+flights %>% group_by(origin) %>% tally()
+@
+
+Existem 120635 \textit{voos} de \textbf{Newark}.
+
+\section{Análise}
+
+<<>>=
+flights %>% group_by(origin) %>% tally() %>%
+  ggplot() +
+  geom_col(aes(x=origin, y=n))
+@
+
+<<results='asis'>>=
+flights %>% group_by(origin) %>% tally() %>%
+  kable()
+@
+
+
+\end{document}
